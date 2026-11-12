@@ -55,13 +55,15 @@ For a given route, **how does the fare move as the departure date gets closer?**
 
 | File | Description |
 |---|---|
-| `DateRanges.ipynb` | Full pipeline: cleaning, route selection, lead-time binning, cost-change analysis, XGBoost model and booking-window simulation |
+| `notebooks/airfare_lead_time_analysis.ipynb` | ⭐ Main analysis: cleaning, route selection, lead-time binning, cost-change analysis, XGBoost model and booking-window simulation |
+| `notebooks/experiments/flight_bookings_eda_and_forecasting.ipynb` | Earlier exploration joining booking and sector data, with LSTM and other forecasting models |
+| `notebooks/experiments/route_fare_regression.ipynb` | Route-level fare regression with high-season event features (F1, festivals and so on) |
 
 ## 🚀 Running
 
 ```bash
 pip install pandas numpy matplotlib seaborn plotly statsmodels scikit-learn xgboost dask
-jupyter notebook DateRanges.ipynb
+jupyter notebook notebooks/airfare_lead_time_analysis.ipynb
 ```
 
 > ⚠️ The booking dataset (`routes_with_total_distances.csv`) is proprietary and not included in this repository.
